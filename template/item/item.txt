@@ -1,0 +1,4 @@
+    public partial class {{classname}}Item : Item
+    {
+        public override LocString DisplayDescription => Localizer.DoStr("{{description}}");
+    }

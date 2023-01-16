@@ -1,0 +1,28 @@
+[Serialized]
+{{requiredComponents}}
+    [Ecopedia("Work Stations", "Craft Tables", subPageName: "{{subPageName}}")]
+    public partial class {{classname}}Object : WorldObject, IRepresentsItem
+    {
+        public virtual Type RepresentedItemType => typeof({{classname}}Item);
+        public override LocString DisplayName => Localizer.DoStr("{{name}}");
+        public override TableTextureMode TableTexture => TableTextureMode.Wood;
+
+        protected override void Initialize()
+        {
+            this.GetComponent<MinimapComponent>().SetCategory(Localizer.DoStr("Crafting"));
+        }
+
+        static {{classname}}Object()
+        {
+            // Still wip from eco mod generator
+            // AddOccupancy<{{classname}}Object>(new List<BlockOccupancy>()
+            // {
+            //    {{hitboxVector}}
+            // });
+        }
+
+        /// <summary>Hook for mods to customize WorldObject before initialization. You can change housing values here.</summary>
+        partial void ModsPreInitialize();
+        /// <summary>Hook for mods to customize WorldObject after initialization.</summary>
+        partial void ModsPostInitialize();
+    }

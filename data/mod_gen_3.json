@@ -1,0 +1,101 @@
+{
+    "namespace":"MyModGen1",
+    "usings":[],
+    "recipes": [
+        {
+            "skill":"Milling",
+            "skillLevel": 1,
+            "classname":"BlueberrySmoothie",
+            "name":"Blueberry Smoothie",
+            "table":"Mill",
+            "input": [
+                {
+                    "item":"Huckleberries",
+                    "amount": 10
+                }
+            ],
+            "output": [
+                {
+                    "item":"BlueberrySmoothie",
+                    "amount": 1
+                }
+            ],
+            "experienceOnCraft": 0.5,
+            "createLaborInCaloriesValue": 15,
+            "createCraftTimeValue": 15,
+            "requirements":[
+                {
+                    "type": "RequiresSkill",
+                    "content":{
+                        "skill": "Milling",
+                        "level": 1
+                    }
+                }
+            ]
+        },
+        {
+            "skill":"Milling",
+            "skillLevel": 1,
+            "classname":"SoyMilk",
+            "name":"Soy Milk",
+            "table":"Mill",
+            "input": [
+                {
+                    "item":"Beans",
+                    "amount": 15
+                }
+            ],
+            "output": [
+                {
+                    "item":"SoyMilk",
+                    "amount": 1
+                }
+            ],
+            "experienceOnCraft": 0.5,
+            "createLaborInCaloriesValue": 15,
+            "createCraftTimeValue": 15,
+            "requirements":[
+                {
+                    "type": "RequiresSkill",
+                    "content":{
+                        "skill": "Milling",
+                        "level": 1
+                    }
+                }
+            ]
+        }
+    ],
+    "items":[
+        {
+            "weight": 100,
+            "description": "A pioik.",
+            "classname": "öppö",
+            "locDisplayName": "Blueberry Smoothie",
+            "tag": "iujinii",
+            "maxStackSize": 100,
+            "compostable": null
+        },
+        {
+            "weight": 100,
+            "description": "Nice soy milk.",
+            "classname": "SoyMilk",
+            "locDisplayName": "Soy Milk",
+            "tag": "Food",
+            "maxStackSize": 100,
+            "compostable": null
+        },
+        {
+            "weight": 100,
+            "description": "Nice soy milk.",
+            "classname": "SoyMilk",
+            "locDisplayName": "Soy Milk",
+            "tag": "Food",
+            "maxStackSize": 100,
+            "compostable": null
+        }
+    ],
+    "worldObjects": [
+    ]
+}
+
+

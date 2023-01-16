@@ -1,0 +1,12 @@
+    public partial class {{classname}}Item : Item
+    {
+        public override LocString DisplayDescription => Localizer.DoStr("{{description}}");
+
+        /// <summary>The amount of calories awarded for eating the food item.</summary>
+        public override float Calories                  => {{calories}};
+        /// <summary>The nutritional value of the food item.</summary>
+        public override Nutrients Nutrition             => new Nutrients() { Carbs = {{carbs}}, Fat = {{fat}}, Protein = {{protein}}, Vitamins = {{vitamins}}};
+
+        /// <summary>Defines the default time it takes for this item to spoil. This value can be modified by the inventory this item currently resides in.</summary>
+        protected override int BaseShelfLife            => (int)TimeUtil.HoursToSeconds({{hoursUntilWaste}});
+    }

@@ -1,0 +1,29 @@
+{{requirements}}
+    public partial class {{classname}}Recipe : RecipeFamily
+    {
+        public {{classname}}Recipe()
+        {
+            this.Recipes = new List<Recipe>
+            {
+                new Recipe(
+                    "{{name}}",
+                    Localizer.DoStr("{{name}}"),
+                    new IngredientElement[]
+                    {
+{{inputItems}}
+                    },
+                    new CraftingElement[]
+                    {
+{{outputItems}}
+                    }
+                )
+            };
+
+            this.ExperienceOnCraft = {{experienceOnCraft}}f;
+            this.LaborInCalories = CreateLaborInCaloriesValue({{createLaborInCaloriesValue}}, typeof({{skill}}Skill));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof({{classname}}Recipe), start: {{createCraftTimeValue}}, skillType: typeof({{skill}}Skill), typeof({{skill}}FocusedSpeedTalent), typeof({{skill}}ParallelSpeedTalent));
+            
+            this.Initialize(Localizer.DoStr("{{name}}"), typeof({{classname}}Recipe));
+            CraftingComponent.AddRecipe(typeof({{table}}Object), this);
+        }
+    }

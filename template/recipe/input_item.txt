@@ -1,0 +1,1 @@
+                        new IngredientElement(typeof({{item}}Item), {{amount}}, typeof({{skill}}Skill), typeof({{skill}}LavishResourcesTalent))

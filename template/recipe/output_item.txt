@@ -1,0 +1,1 @@
+                        new CraftingElement<{{item}}Item>({{amount}})
